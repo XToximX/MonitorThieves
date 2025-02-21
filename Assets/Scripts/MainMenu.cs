@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
+    [Header("Menus")]
+    [SerializeField] GameObject mainMenu;
+    [SerializeField] GameObject settingsMenu;
+
+    public void Start()
+    {
+        mainMenu.SetActive(true);
+        settingsMenu.SetActive(false);
+    }
+
     public void PlayBtn()
     {
         Debug.Log("Play");
@@ -11,7 +21,8 @@ public class MainMenu : MonoBehaviour
     
     public void SettingsBtn()
     {
-        Debug.Log("Settings");
+        mainMenu.SetActive(false);
+        settingsMenu.SetActive(true);
     }
     
     public void QuitBtn()
