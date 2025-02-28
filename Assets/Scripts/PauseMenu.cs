@@ -29,6 +29,8 @@ public class PauseMenu : MonoBehaviour
                 resumeBtn.SetActive(true);
                 mainMenuBtn.SetActive(true);
                 quitBnt.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
             else
                 Resume();
@@ -42,6 +44,8 @@ public class PauseMenu : MonoBehaviour
         resumeBtn.SetActive(false);
         mainMenuBtn.SetActive(false);
         quitBnt.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void MainMenu()
