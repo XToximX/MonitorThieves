@@ -35,6 +35,7 @@ public class thrower : MonoBehaviour
     private void Throw()
     {
         readyToThrow = false;
+
         GameObject projectile = Instantiate(objectToThrow, attackPoint.position, cam.rotation);
 
         Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
